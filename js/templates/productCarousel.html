@@ -1,0 +1,12 @@
+<!-- The #each helper iterates over an array of items. -->
+
+{{#each product}}
+<div class="carousel-item {{#if @first}} active {{/if}}">
+    <img title={{title}} src="{{img-src}}">
+    <div>
+      <h5>{{title}}</h5>
+      <p class="price">{{price}}</p>
+      <a href="javascript:void(0)" class="openPopup" data-toggle="modal" data-target="#myModal">View More</a>
+    </div>
+  </div>
+{{/each}}

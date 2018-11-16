@@ -1,0 +1,44 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and below) */
+@media (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+  /* body{
+    font-size: 10px;
+  } */
+  .hidden-phone {
+    display: none;
+  }
+  /* h4{
+    font-size: calc(12px + 2vmin);
+  } */
+  .qty-input {
+    width: 30%;
+  }
+  .qty-price-details {
+    float: right;
+    top: -40px;
+  }
+}
+@media (min-width: 768px) {
+  .hidden-tablet {
+    display: none;
+  }
+  .product-cta-links {
+    position: absolute;
+    bottom: 0px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .modal-dialog {
+    max-width: 50%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

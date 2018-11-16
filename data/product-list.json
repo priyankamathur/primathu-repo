@@ -1,0 +1,7 @@
+{
+  "product": [
+      {"id": 1, "title": "Solid green cotton t-shirt", "style" : "MS13KT1906", "color" : "blue", "size" : "S", "quantity" : "1", "price": "11.00", "img-src" : "./media/images/product-1.png", "old price" : null, "currency" : "$"},
+      {"id": 2, "title": "Pink Raibow print girls tee", "style" : "MS13KT1906", "color" : "gray", "size" : "S", "quantity" : "1", "price": "17.00", "img-src" : "./media/images/product-2.png", "old price" : null, "currency" : "$"},
+      {"id": 3, "title": "Blue Flower Pattern Shirt", "style" : "MS13KT1906", "color" : "blue", "size" : "S", "quantity" : "1", "price": "9.00", "img-src" : "./media/images/product-3.png", "old price" : "21.00", "currency" : "$"}
+  ]
+}

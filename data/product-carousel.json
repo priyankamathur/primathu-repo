@@ -1,0 +1,7 @@
+{
+  "product": [
+      {"id": 1, "title": "Grey White cotton Polo T", "style" : "MS13KT1906", "color" : "blue", "price": "11.00", "img-src" : "./media/images/carousel-product-1.png", "old price" : null, "currency" : "$"},
+      {"id": 2, "title": "Grey T Shirt", "style" : "MS13KT1906", "color" : "gray", "price": "17.00", "img-src" : "./media/images/carousel-product-2.png", "old price" : null, "currency" : "$"},
+      {"id": 3, "title": "Yellow Pattern Shirt", "style" : "MS13KT1906", "color" : "blue", "price": "9.00", "img-src" : "./media/images/carousel-product-3.png", "old price" : "21.00", "currency" : "$"}
+  ]
+}

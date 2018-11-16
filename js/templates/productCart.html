@@ -1,0 +1,30 @@
+<!-- The #each helper iterates over an array of items. -->
+
+{{#each product}}
+<div class="product-item row">
+  <div class="col-md-6 col-6 col-sm-6 col-lg-3"><img src="{{img-src}}" /></div>
+  <div class="col-md-6 col-6 col-sm-6 col-lg-6">
+    <h4 class="text-uppercase">{{ title }}</h4>
+    <p class="style">Style #: {{ style }}</p>
+    <p class="colour">Color: {{ color }}</p>
+  </div>
+  <div class="col-6 hidden-tablet"></div>
+  <div class="col-md-6 col-6 col-sm-6 col-lg-3 qty-price-details">
+    <div class="row">
+        <div class="col-12 col-lg-4">S</div>
+        <div class="col-12 col-lg-4">
+          <input type="text" value="1" name="qty" class="qty-input" />
+        </div>
+        <div class="col-12 col-lg-4">{{currency}}{{price}}</div>
+    </div>
+  </div>
+  <div class="col-12 text-center">
+      <ul class="text-uppercase list-inline">
+          <li><a href="../../js/templates/editProduct.html" class="edit" data-toggle="modal" data-target="#myModal" data-remote="false">Edit</a></li>
+          <li><a href="#">X Remove</a></li>
+          <li><a href="#">Save for Later</a></li>
+        </ul>
+  </div>
+  
+</div>
+{{/each}}
