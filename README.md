@@ -21,6 +21,6 @@
    -#- When user updates the quantity and/ or size in the overlay and clicks on Edit link
    -#- The quantity, size and the respective price gets updated
   - When user clicks on View Link in a products carousal an View Overlay opens up.
-    -#- It shoes respective products data.
+    -#- It shows the respective products data.
   
  
