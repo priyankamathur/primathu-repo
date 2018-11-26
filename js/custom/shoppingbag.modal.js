@@ -40,7 +40,7 @@
               $(".modal-body .product-section").attr("data-productId",product.id);
               $(".modal-body #productTitle").html(product.title);
               $(".modal-body #productImage").attr("src", product.image);
-              $(".modal-body #productImage").attr("title", product.title);
+              $(".modal-body #productImage").attr("alt", product.title);
               $(".modal-body .price sup").html(product.currency);
               $(".modal-body .price span").html(product.price);
               $(".modal-body #qtyDropdown").val(product.qty);
