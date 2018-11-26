@@ -11,6 +11,8 @@
  - This project uses Bootstrap framework from CDN.
  - For HTML templating Handlebars are being used.
  - project is responsive and is developed for desktop, tablet and mobile.
+ - Implemented accessibilty check.
+ - Implemented Jasmine Unit Test cases.
  
  ## Functionalities developed:
  - Responsive layout.
@@ -22,5 +24,7 @@
    -#- The quantity, size and the respective price gets updated
   - When user clicks on View Link in a products carousal an View Overlay opens up.
     -#- It shows the respective products data.
-  
+  ## Unit Testing
+  For unit testing Jasmine Unit test cases have been used, please refer to the following page to refer to the unit test cases,
+  -http://localhost:8080/index_specRunner.html?random=false
  
