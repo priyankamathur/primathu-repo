@@ -13,6 +13,8 @@
  - project is responsive and is developed for desktop, tablet and mobile.
  - Implemented accessibilty check.
  - Implemented Jasmine Unit Test cases.
+ - Accessibilty check has been done using Achecker from, 
+   https://achecker.ca/checker/index.php
  
  ## Functionalities developed:
  - Responsive layout.
