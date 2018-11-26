@@ -20,6 +20,8 @@
       this.setProductList = function() {
         if (templateContainer.length) {
             renderTemplate();
+            return true;
+            
         }
       };
       // this method gets the data from the Product List JSON file and renders it

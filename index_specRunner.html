@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang=en><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang=en><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang=en><![endif]-->
+<!-- [if gt IE 8]><! -->
+<html class="no-js" lang="en">
+  <!-- <![endif] -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/png" href="./js/jasmine/lib/jasmine-3.3.0/jasmine_favicon.png">
+    <link rel="stylesheet" href="./js/jasmine/lib/jasmine-3.3.0/jasmine.css">
+    <link rel="stylesheet" href="./css/custom/styles.css" />
+    <link rel="stylesheet" href="./css/custom/device.css" />
+    <script src="./js/custom/htmlElements.js"></script>
+    <script src="./js/jasmine/lib/jasmine-3.3.0/jasmine.js"></script>
+    <script src="./js/jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
+    <script src="./js/jasmine/lib/jasmine-3.3.0/boot.js"></script>
+    <title>Shopping Bag</title>
+  </head>
+  <body>
+      <div class="container-fluid shopping-bag">
+          <header class="row">
+            <h1 class="col-9 col-md-12">Your Shopping Bag</h1>
+            <h2 class="hidden">Shopping Bag List</h2>
+            <div
+              class="text-right col-3 hidden-desktop hidden-tablet product-count"
+            >
+              <span class="align-bottom"
+                ><strong class="number-of-items">2</strong> ITEM</span
+              >
+            </div>
+          </header>
+          <div class="row cart-section">
+            <section class="col-12 col-lg-9">
+              <div class="product-heading hidden-phone line-top text-uppercase">
+                <div class="row">
+                  <div class="col-9  checkout-table-label items">
+                    <strong class="number-of-items">2</strong> ITEM
+                  </div>
+                  <div class="col-1 checkout-table-label size text-center">
+                    Size
+                  </div>
+                  <div class="col-1 checkout-table-label quantity text-center">
+                    Qty
+                  </div>
+                  <div class="col-1 checkout-table-label price text-center">
+                    Price
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="line-top line-thick row"></div> -->
+              <div
+                id="productDetails"
+                class="template-container line-top line-bottom line-thick"
+              ></div>
+              <div class="col-12 py-4">
+                <div class="row">
+                  <aside class="col-3 hidden-phone need-help">
+                    <div class="row">
+                      <div class="col-6 pl-0">
+                        <h3 class="mb-2">Need help or have questions?</h3>
+                        <p class="mb-2">Call Customer Service at 1-800-555-5555</p>
+                        <p class="mb-2">
+                          <a href="javascript:void(0)"
+                            >Chat with one of our stylists</a
+                          >
+                        </p>
+                        <p class="mb-2">
+                          <a href="javascript:void(0)"
+                            >See return &amp; exchange policy</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </aside>
+                  <section id="cartTotal" class="col-12 col-lg-9 col-md-9 px-0">
+                    <div class="cart-summary">
+                      <form
+                        id="enterPromotionalCode"
+                        name="enterPromotionalCode"
+                        action="/checkpromotionalcode.json"
+                        novalidate="novalidate"
+                      >
+                        <ul class="row promotion-code py-5">
+                          <li class="col-12 col-md-7 text-center text-md-left">
+                            <label for="promoCode">
+                              <h4>ENTER PROMOTIONAL CODE</h4>
+                            </label>
+                          </li>
+                          <li class="col-9 col-md-5 mx-auto">
+                            <div class="row enter-promotional-code rounded-0">
+                              <input
+                                id="promoCode"
+                                type="text"
+                                class="promotional-code line-border col-7 rounded-0"
+                                name="promotional"
+                                value=""
+                                maxlength="12"
+                              />
+    
+                              <button
+                                type="button"
+                                class="btn btn-outline-secondary col-4 ml-2"
+                              >
+                                APPLY
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </form>
+                      <div class="line-top line-bottom line-thick pt-5">
+                        <ul class="row mb-3">
+                          <li class="col-6">
+                            <h4 class="text-uppercase">SUBTOTAL</h4>
+                          </li>
+                          <li class="col-6 text-right">
+                            <span class="price"><sup>$</sup>37.00</span>
+                          </li>
+                        </ul>
+                        <ul class="row mb-3">
+                          <li class="col-6">
+                            <h4 class="text-uppercase">
+                              Promotion code JF10 applied
+                            </h4>
+                          </li>
+                          <li class="col-6 text-right">
+                            <span class="price"><sup>$</sup>-7.00</span>
+                          </li>
+                        </ul>
+                        <ul class="row mb-3">
+                          <li class="col-6">
+                            <h4 class="text-uppercase mb-0">ESTIMATED SHIPPING*</h4>
+                            <span class="grey-text help-text"
+                              >You qualify for free shipping because your order is
+                              over $50.</span
+                            >
+                          </li>
+                          <li class="col-6 text-right text-uppercase">FREE</li>
+                        </ul>
+    
+                        <div class="line-top py-4">
+                          <ul class="row">
+                            <li class="col-6">
+                              <h3 class="text-uppercase mb-0">ESTIMATED TOTAL</h3>
+                              <span class="grey-text"
+                                >Tax will be applied during checkout</span
+                              >
+                            </li>
+                            <li class="col-6 text-right">
+                              <span class="price"><sup>$</sup>30.00</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="shopping-bag-cta text-right text-uppercase py-4">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-lg cart-checkout-btn float-md-right rounded-0"
+                      >
+                        Checkout</button
+                      ><a href="javascript:void(0)" class="">CONTINUE SHOPPING</a>
+                    </div>
+                    <div
+                      class="secure-checkout-text grey-text text-center text-md-right"
+                    >
+                      <p>
+                        <span class="icon-lock hidden-phone"></span> Secure
+                        checkout. Shopping is<br class="hidden-tablet" />
+                        always safe &amp; secure
+                      </p>
+                      <p>
+                        <span class="icon-lock hidden-desktop hidden-tablet"></span>
+                      </p>
+                    </div>
+    
+                    <div class="disclaimer  hidden-desktop hidden-tablet">
+                      <p class="line-top py-3">
+                        <a
+                          href="javascript:void(0)"
+                          class="text-uppercase grey-text"
+                          >Sign in</a
+                        >
+                        to save your cart and have access to your items on mobile,
+                        tablet, and desktop.
+                      </p>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <aside class="col-lg-3 hidden-phone hidden-tablet">
+              <div
+                id="myCarousel"
+                class="carousel slide text-center text-uppercase line-border"
+                data-ride="carousel"
+                data-interval="false"
+              >
+                <h4 class="my-3">Take a look at</h4>
+                <h5>New Arrivals</h5>
+    
+                <!-- The slideshow -->
+                <div
+                  id="productCarousel"
+                  class="carousel-inner template-container"
+                ></div>
+    
+                <!-- Left and right controls -->
+                <a
+                  class="carousel-control-prev"
+                  href="#myCarousel"
+                  data-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#myCarousel"
+                  data-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body"></div>
+            </div>
+          </div>
+        </div>
+        <script id="cart-template" type="text/x-handlebars-template">
+          <!-- The #each helper iterates over an array of items. -->
+          {{#each product}}
+          <article id=cartProductId-{{id}} class="product-item">
+              <div class="row" >
+                  <div class="col-md-3  col-6 col-lg-3 product-item-image"><img title="{{title}}" alt="{{title}}" src="{{img-src}}" /></div>
+                  <div class="col-md-6  col-6 col-lg-6 ">
+                    <h3 class="text-uppercase product-title">{{ title }}</h3>
+                    <p class="style grey-text">Style #: {{ style }}</p>
+                    <p class="colour grey-text">Color: {{ color }}</p>
+                    <p class="hidden-tablet grey-text">Size: <span class="item-size">{{size}}</span></p>
+                    <div class="product-cta-links hidden-phone">
+                        <ul class="text-uppercase list-inline">
+                            <li><a href="../../js/templates/editProduct.html" class="edit" data-qty="{{quantity}}" data-size="{{size}}" data-title="{{title}}" data-img="{{img-src}}" data-currency="{{currency}}" data-price="{{price}}" data-id="cartProductId-{{id}}" data-toggle="modal" data-target="#myModal" data-remote="false">Edit</a></li>
+                            <li><a href="#">X Remove</a></li>
+                            <li><a href="#">Save for Later</a></li>
+                          </ul>
+                    </div>
+                  </div>
+                  <!-- <div class="col-6 hidden-tablet"></div> -->
+                  <div class="col-md-3 col-6 col-lg-3 qty-price-details">
+                    <div class="row">
+                        <div class="col-12 col-md-4 text-center-tablet hidden-phone"><span class="item-size">{{size}}</span></div>
+                        <div class="col-12 col-md-4 text-center-tablet">
+                          <label for="qty-item-{{id}}">
+                              <span class="hidden-tablet hidden-desktop text-uppercase">Qty: </span>
+                              <input type="text" id="qty-item-{{id}}" value="{{quantity}}" name="qty-item-{{id}}" class="qty-input" disabled />
+                          </label>
+    
+                        </div>
+                        <div class="col-12 col-md-4 text-center-tablet"><sup>{{currency}}</sup><span class="price">{{price}}</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center hidden-desktop hidden-tablet">
+                    <ul class="text-uppercase list-inline">
+                        <li><a href="../../js/templates/editProduct.html" class="edit" data-size="{{size}}" data-qty="{{quantity}}" data-title="{{title}}" data-img="{{img-src}}" data-currency="{{currency}}" data-price="{{price}}" data-id="cartProductId-{{id}}" data-toggle="modal" data-target="#myModal" data-remote="false">Edit</a></li>
+                        <li><a href="#">X Remove</a></li>
+                        <li><a href="#">Save for Later</a></li>
+                      </ul>
+                </div>
+          </article>
+          {{/each}}
+        </script>
+        <script id="carousal-template" type="text/x-handlebars-template">
+          <!-- The #each helper iterates over an array of items. -->
+            {{#each product}}
+            <div class="carousel-item {{#if @first}} active {{/if}}">
+                <div class="img-container">
+                <img alt="{{title}}" title="{{title}}" src="{{img-src}}">
+                </div>
+                <div class="py-3">
+                  <h6 class="mt-3">{{title}}</h6>
+                  <p class="price mb-3">{{currency}}{{price}}</p>
+                  <a href="../../js/templates/viewProduct.html" class="view btn btn-primary" data-title="{{title}}" data-img="{{img-src}}" data-price="{{currency}}{{price}}" data-id="product-{{id}}" data-toggle="modal" data-target="#myModal" data-remote="false">View More</a>
+                </div>
+              </div>
+            {{/each}}
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/lib/jquery-3.3.1.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/lib/handlebars.js"></script>
+    <script src="./js/custom/shoppingbag.config.js"></script>
+    <script src="./js/custom/shoppingbag.main.js"></script>
+    <script src="./js/custom/shoppingbag.modal.js"></script>
+    <!-- spec files are included here... -->
+    <script src="./js/jasmine/spec/shoppingbag.main.spec.js"></script>
+  </body>
+</html>
